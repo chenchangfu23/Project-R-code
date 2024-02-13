@@ -1,3 +1,15 @@
 install.packages"ReIns"
 install.packages"IDPS"
 install.packages"tea"
+# Number of observations
+> n <- 5000
+> 
+> # Generate random observations from Pareto Type II distribution
+> generate_pareto_type_II <- function(n) {
++     u <- runif(n)
++     x <- exp((u^(-1/5)) / 5)
++     return(x)
++ }
+> 
+> # Generate data
+> data23 <- generate_pareto_type_II(n)
